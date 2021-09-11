@@ -1,0 +1,255 @@
+:root {
+    --primario: #9123A7;
+    --primarioOscuro: #7E1A91;
+    --secundario: #FFC540;
+    --fontPrincipal: 'Staatliches', cursive;
+}
+
+/**GLOBAL */
+
+html {
+    font-size: 62.5%;
+    box-sizing: border-box;
+    position: relative;
+    min-height: 100%;
+}
+
+*, *:before, *:after {
+    box-sizing: inherit;
+}
+
+body {
+    line-height: 2;
+    font-size: 2rem;
+    color: #ffffff;
+    height: 100%;
+    min-height: 100vh;
+    /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#e570e7+0,c85ec7+51,a849a3+100 */
+    background: #e570e7;
+    /* Old browsers */
+    background: -moz-linear-gradient(top, #e570e7 0%, #c85ec7 51%, #a849a3 100%);
+    /* FF3.6-15 */
+    background: -webkit-linear-gradient(top, #e570e7 0%, #c85ec7 51%, #a849a3 100%);
+    /* Chrome10-25,Safari5.1-6 */
+    background: linear-gradient(to bottom, #e570e7 0%, #c85ec7 51%, #a849a3 100%);
+    /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#e570e7', endColorstr='#a849a3', GradientType=0);
+    /* IE6-9 */
+    background-attachment: fixed;
+    display: flex;
+    flex-direction: column;
+}
+
+p {
+    font-size: 1.8rem;
+    font-family: Arial, Helvetica, sans-serif
+}
+
+h1 {
+    color: var(--secundario);
+    text-align: center;
+    font-size: 4rem;
+    font-family: var(--fontPrincipal);
+}
+
+.contenedor {
+    max-width: 1200px;
+    width: 95%;
+    height: 100%;
+    margin: 0 auto;
+}
+
+img {
+    width: 100%;
+}
+
+.content{
+    margin-bottom: 5rem;
+}
+
+/**BOTONES*/
+
+.boton {
+    background-color: var(--secundario);
+    font-family: var(--fontPrincipal);
+    font-size: 2rem;
+    border: none;
+    transition: background-color .3s ease;
+}
+
+.boton:hover {
+    cursor: pointer;
+    background-color: rgb(233, 187, 2);
+}
+
+/** CONTENIDO */
+
+/**HEADER*/
+
+.header {
+    display: grid;
+    justify-content: center;
+    padding: 2rem 0;
+}
+
+.barra {
+    background-color: var(--primarioOscuro);
+    padding: 1rem 0;
+}
+
+.barra .nav {
+    display: grid;
+    grid-template-columns: repeat(2, 200px);
+    justify-content: center;
+    column-gap: 2rem;
+}
+
+.barra .nav a {
+    font-family: var(--fontPrincipal);
+    color: #ffffff;
+    text-decoration: none;
+    text-align: center;
+}
+
+.barra .nav a:hover {
+    color: var(--secundario);
+}
+
+/**MAIN*/
+
+.lista-productos {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 2rem;
+}
+
+@media (min-width: 768px) {
+    .lista-productos {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+
+.producto {
+    background-color: var(--primarioOscuro);
+    padding: 1rem;
+}
+
+
+.contenido-producto p {
+    font-family: var(--fontPrincipal);
+    color: #ffffff;
+    margin: 1rem 0;
+    line-height: 1.2;
+    text-align: center;
+}
+
+.contenido-producto .titulo {
+    font-size: 4rem;
+}
+
+.contenido-producto .precio {
+    font-size: 2.8rem;
+    color: var(--secundario);
+}
+
+.grafico {
+    min-height: 300px;
+}
+
+.grafico-1 {
+    background: url(../img/grafico1.jpg) no-repeat;
+    background-size: cover;
+    grid-row: 2 / 3;
+    grid-column: 1 / 3;
+}
+
+.grafico-2 {
+    background: url(../img/grafico2.jpg) no-repeat;
+    background-size: cover;
+    grid-row: 8 / 9;
+    grid-column: 1 /3;
+}
+
+/** Se hace el Media porque si asigno mas Columnas 
+se nos desconstruye el grid*/
+
+@media (min-width: 768px) {
+    .grafico-2 {
+        grid-row: 5 / 6;
+        grid-column: 2 / 4;
+    }
+}
+
+/*Nosotros*/
+
+.contenedor-informacion {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); /*Sin mediaQUERY */
+    column-gap: 4rem;
+    
+}
+
+/**Footer*/
+
+.footer {
+    background-color: var(--primarioOscuro);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    /* position: absolute;
+    left: 0;
+    bottom: 0; */
+    width: 100%;
+    height: 100%;
+    margin-top: auto;
+}
+
+.copyright {
+    font-family: var(--fontPrincipal);
+    font-size: 2rem;
+    text-align: center;
+}
+
+/*Producto*/
+
+.producto-page h1{
+    margin: 10px;
+}
+
+.formulario-pedido {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(2, 6rem);
+    column-gap: 1rem;
+    row-gap: 1rem;
+    margin-bottom: 2rem;
+}
+
+.formulario-pedido .boton{
+    grid-column: 1 / 3;
+}
+
+.campo {
+    background-color: transparent;
+    border: 5px solid #ffffff;
+    font-family: var(--fontPrincipal);
+    font-size: 3rem;
+    padding: 1rem;
+    width: 100%;
+    color: #ffffff;
+    text-align: center;
+    
+}
+
+
+
+.talla {
+    -webkit-appearance: none;
+    -webkit-border-radius: 0px;
+}
+
+.imagen-producto {
+    height: auto;
+    max-height: 500px;
+    overflow: hidden;
+}
