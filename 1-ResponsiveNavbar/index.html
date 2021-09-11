@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/main.css">
+    <link rel="icon" href="https://img.icons8.com/material-outlined/24/000000/open-view.png">
+    <title>Responsive Navbar</title>
+</head>
+
+<body>
+    <div class="navbar" id="topnav">
+        <a href="javascript:void(0);">Home</a>
+        <a href="javascript:void(0);">Other</a>
+        <a href="javascript:void(0);">Links</a>
+        <a href="javascript:void(0);">Another</a>
+        <a href="javascript:void(0);" onclick="toggle()" class="menuicon">☰</a>
+    </div>
+    <script>
+        function toggle() {
+            var x = document.getElementById("topnav");
+            if (x.className === "navbar") {
+                x.className += " responsive";
+            } else {
+                x.className = "navbar";
+            }
+        }
+    </script>
+</body>
+
+</html>
