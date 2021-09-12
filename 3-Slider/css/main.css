@@ -17,7 +17,7 @@ body {
 .box-slider {
   position: relative;
   margin: 0 20px;
-  border: solid 4px black;
+  border: solid 4px #c1d0d6;
   border-radius: 20px;
   height: 50vh;
   width: 100%;
@@ -61,6 +61,7 @@ body {
   z-index: 999;
   background-color: #2b2b2b;
   padding: 3px 10px;
+  border-radius: 10px;
 }
 
 .arrow:hover {
