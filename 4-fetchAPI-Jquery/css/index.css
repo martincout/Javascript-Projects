@@ -1,0 +1,20 @@
+#container-users > li{
+    list-style-type: none;
+    border: 1px solid black;
+    padding: 10px;
+}
+
+#container-users > :first-of-type{
+    margin-top: 5px;
+}
+
+#container-users > li p{
+    float: right;
+    font-weight: bold;
+}
+
+.numberUsers{
+    height: 38px;
+    width: 70px;
+    vertical-align: middle;
+}
